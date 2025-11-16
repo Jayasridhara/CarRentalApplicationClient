@@ -1,0 +1,52 @@
+import React from 'react'
+import Title from './Title'
+import { assets } from '../assets/assets';
+import { Star } from 'lucide-react';
+
+function Testimonial() {
+    const testimonials = [
+        {  name: "Emma Rodriguez",
+            location: "Barcelona, Spain", 
+            image: assets.testimonial_image_1, 
+            rating: 5, 
+            testimonial: "I've rented cars from varios companies,but the experience with CarRental was exceptional" },
+        {  name: "Liam Johnson", 
+           location: "New York, USA", 
+           image: assets.testimonial_image_2, 
+           rating: 4, 
+           testimonial: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!"},
+        { name: "Sophia Lee", 
+          location: "Seoul, South Korea", 
+          image: assets.testimonial_image_1, 
+          rating: 5, 
+          testimonial: "I highly recommend CarRental! Their fleet is amazing... always feel like I'm getting the best deal with excellent service." }
+    ];
+  return (
+   <div className="py-28 px-6 md:px-16 lg:px-24 xl:px-44">
+            <Title title="What Our Customers Say" subTitle="Discover why discerning
+            travelers choose StayVenture for their luxury accommodations around the
+            world."/>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18">
+                {testimonials.map((testimonial,index) => (
+                    <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-500">
+                        <div  className="flex items-center gap-3">
+                            <img className="w-12 h-12 rounded-full" src={testimonial.image} alt={testimonial.name} />
+                            <div>
+                                <p className="font-playfair text-xl">{testimonial.name}</p>
+                                <p className="text-gray-500">{testimonial.location}</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-1 mt-4">
+                            {Array(5).fill(0).map((_, index) => (
+                                <img src={assets.star_icon} alt="star-icon" key={index} className="src" />
+                            ))}
+                        </div>
+                        <p className="text-gray-500 max-w-90 mt-4">"{testimonial.testimonial}"</p>
+                    </div>
+                ))}
+            </div>
+    </div>
+  )
+}
+
+export default Testimonial
