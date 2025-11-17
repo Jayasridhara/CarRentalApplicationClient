@@ -1,16 +1,85 @@
-# React + Vite
+Car Rental Application (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Car Rental Booking platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with user authentication, car listing, image uploads (ImageKit), booking management, owner dashboard, and Cash on Delivery (COD) support.
 
-Currently, two official plugins are available:
+## Netlify and GitHub Links
+- User Netlify Link: https://carrentalbook.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+🚦 Features
+👤 User Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+User Registration & Login (JWT Authentication)
 
-## Expanding the ESLint configuration
+Secure password hashing using bcrypt
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Update profile picture using ImageKit
+
+View available cars based on location and availability
+
+Check real-time car availability based on date range
+
+Book cars with Cash on Delivery
+
+View all personal bookings
+
+🚘 Car Owner Features
+
+Convert normal user to Owner
+
+Add cars with images and details
+
+Image optimization via ImageKit Transformer
+
+View all listed cars
+
+Toggle car availability (Available / Unavailable)
+
+Soft delete a car
+
+See all bookings for your cars
+
+Update booking status (Pending → Confirmed)
+
+📊 Owner Dashboard
+
+Total cars listed
+
+Total bookings received
+
+Pending bookings count
+
+Completed bookings count
+
+Last 3 recent bookings
+
+Monthly revenue based on confirmed bookings
+
+🛠️ Tech Stack
+Frontend
+
+React.js
+
+TailwindCSS
+
+Axios
+
+React Router
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB
+
+JWT Authentication
+
+bcrypt
+
+ImageKit SDK
+
+Multer for image upload
+
+Mongoose ORM
